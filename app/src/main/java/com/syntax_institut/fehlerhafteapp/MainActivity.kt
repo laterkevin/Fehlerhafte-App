@@ -29,13 +29,13 @@ class MainActivity : AppCompatActivity() {
         countDownTimer = object : CountDownTimer(5000, 1000) {
             override fun onTick(p0: Long) {
                 countNr--
-                findViewById<TextView>(R.id.textView).text = countNr.toString()
+                findViewById<TextView>(R.id.countDownTimer).text = countNr.toString()
             }
 
             override fun onFinish() {
-                findViewById<TextView>(R.id.textView).visibility = View.GONE
-                findViewById<TextView>(R.id.secondtextView).visibility = View.GONE
-                findViewById<TextView>(R.id.thirdtextView).visibility = View.VISIBLE
+                findViewById<TextView>(R.id.tv_app_startet).visibility = View.GONE
+                findViewById<TextView>(R.id.countDownTimer).visibility = View.GONE
+                findViewById<TextView>(R.id.tv_funktioniert).visibility = View.VISIBLE
             }
         }.start()
     }
